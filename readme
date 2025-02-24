@@ -1,0 +1,2 @@
+docker build -t testpython:v1 .
+docker run -itd -p 127.0.0.1:8080:8080 --name testpy testpython:v1
