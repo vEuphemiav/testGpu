@@ -61,7 +61,12 @@ COPY --from=builder /usr/local/lib/python3.9/site-packages /usr/local/lib/python
 # WORKDIR /app/svc_proj
 
 # 暴露端口（如果需要）
-# EXPOSE 9000
+EXPOSE 8080
 
 # 设置容器启动命令
 # CMD [ "python3", "serverless_main.py" ]
+
+# 设置工作目录
+WORKDIR /
+COPY . .
+CMD [ "python", "./main.py" ]
