@@ -1,5 +1,5 @@
 # FROM python:3.9-slim as builder
-FROM crpi-w7b7auv29j0eu371-vpc.cn-hangzhou.personal.cr.aliyuncs.com/test_rg/python_3.9_slim:v1 as builder
+FROM crpi-w7b7auv29j0eu371.cn-hangzhou.personal.cr.aliyuncs.com/test_rg/python_3.9_slim:v1 as builder
 
 # 设置环境变量
 ENV LANG zh_CN.UTF-8 \
@@ -46,7 +46,7 @@ RUN pip install --upgrade pip==23.2.1 && \
 
 # 使用多阶段构建，只复制必要的文件到最终镜像
 #FROM python:3.9-slim
-FROM crpi-w7b7auv29j0eu371-vpc.cn-hangzhou.personal.cr.aliyuncs.com/test_rg/python_3.9_slim:v1
+FROM crpi-w7b7auv29j0eu371.cn-hangzhou.personal.cr.aliyuncs.com/test_rg/python_3.9_slim:v1
 
 # 设置环境变量
 ENV LANG zh_CN.UTF-8 \
